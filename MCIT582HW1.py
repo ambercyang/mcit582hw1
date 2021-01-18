@@ -24,27 +24,28 @@ def decrypt(key,ciphertext):
     # transverse the cipher text
     for i in range(len(ciphertext)):
       char = ciphertext[i]
-      # Encrypt uppercase characters in plain text
+      # Decrypt uppercase characters in cipher text
       plaintext += chr((ord(char) - key-65) % 26 + 65)
     return plaintext
 
 
-# In[7]:
+# In[18]:
 
 
-plaintext = "CEASER CIPHER DEMO"
-key = 4
+plaintext = "CEASER"
+key = 27
+
 
 print("Plain Text : " + plaintext)
 print("Shift pattern : " + str(key))
 print("Cipher: " + encrypt(key,plaintext))
 
 
-# In[11]:
+# In[19]:
 
 
-ciphertext = "GIEWIVXGMTLIVXHIQS"
-key = 4
+ciphertext = "DFBTFS"
+key = 27
 
 print("cipher Text : " + ciphertext)
 print("Shift pattern : " + str(key))
